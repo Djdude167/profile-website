@@ -67,11 +67,6 @@ nav {
     transition: all 0.5s ease;
 }
 
-.nav-links i:hover {
-    background: rgba(255, 255, 255, 0.25);
-    transition: all ease 0.5s;
-}
-
 .nav-links a:hover {
     background: rgba(255, 255, 255, 0.25);
     transition: all ease 0.5s;
@@ -91,6 +86,78 @@ nav {
 
 #logo:hover {
     background-color: rgba(255, 255, 255, 0.25);
+}
+
+
+/* Socials Panel */
+.socialsPanel {
+    position: fixed;
+    top: 50vh;
+    padding-right: 100px;
+    margin-left: -40px;
+    width: 10vw;
+    transform: translateY(-50%);   
+    transition: ease-in-out 0.25s;
+    .fa-chevron-right {
+        color: rgba(255, 255, 255, 0.25);
+        transition: ease-in-out 0.1s;
+    }
+}
+
+.socialsPanel:hover, .socialsPanelFocus {
+    margin-left: 25px;
+    transition: ease-in-out 0.25s;
+    .fa-chevron-right {
+        color: rgba(255, 255, 255, 0.75);
+        transition: ease-in-out 0.1s;
+    }
+}
+
+.socialsPanelIcons {
+    @include flexCenter(column);
+}
+
+.socialsIcons {
+    list-style: none;
+    li {
+        margin-left: 5px;
+        margin-bottom: 5px;
+        width: 38px;
+        height: 38px;
+        border-radius: 15%;
+        background-color: $gray3;
+    }
+    i {
+        transform: translateY(10%);
+    }
+    a {
+        width: 100%;
+        height: 100%;
+        font-size: 28px;
+        padding: 5px 7px;
+        text-decoration: none;
+        color: white;
+    }
+    .fa-youtube {
+        transform: translateY(5%);
+        font-size: 23px;
+        
+    } .fa-github {
+        transform: translateY(5%);
+        font-size: 25px;
+    }
+    li:hover {
+        background-color: $gray4;
+    }
+}
+
+.fa-chevron-right {
+    color: white;
+    font-size: 28px;
+    top: 50%;
+    left: 50px;
+    position: absolute;
+    transform: translateY(-50%);
 }
 
 // Landing Page
@@ -147,6 +214,7 @@ nav {
 
 .simpleAbout {
     margin: 10vh $sideMargin;
+    visibility: hidden;
     p {
         margin-top: 15px;
     }
@@ -165,26 +233,48 @@ nav {
 
 .skillListGroups {
     margin: 2.5% 1px;
+    visibility: hidden;
+    opacity: 0;
 }
 
-.softwareSkills, .programList, .mediaList, .miscList {
+.softwareSkills, .programList, .mediaList, .miscList { // Bullet List Elements
     list-style: circle;
-    margin: 0px 0px 0px 15px;
+    margin: 0px 0px 0px 20px;
+}
+
+.scrolledPast {
+    visibility: visible;
+    z-index: -1;
+    animation: fadeDown 1s ease-out;
 }
 
 /* Projects Section */
 
-.projects {
+.projectsContent {
     width: 100%;
     height: 100vh;
+    padding-bottom: 10vh;
     background-color: $gray;
 }
+
+.projectHeader {
+    margin: 0px $sideMargin;
+    padding-top: 10vh;
+    color: white;
+    p {
+        margin-top: 15px;
+    }
+    h1 {
+        font-size: 36px; 
+    }
+}
+
 
 /* Quick Contacts Section */
 
 .quickContacts {
     width: 100%;
-    height: 85vh;
+    height: 50vh;
     z-index: 1;
     background-color: $gray2;
 }
@@ -208,7 +298,7 @@ footer {
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 580px) {
     // Navbar
     .menu-line {
         display: block;
@@ -265,6 +355,11 @@ footer {
         z-index: 10;
         pointer-events: all;
         opacity: 100;
+    }
+
+    // Socials Panel
+    .socialsPanel {
+        display: none;
     }
 
     // Landing

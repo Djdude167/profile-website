@@ -143,12 +143,6 @@ nav {
   transition: all 0.5s ease;
 }
 
-.nav-links i:hover {
-  background: rgba(255, 255, 255, 0.25);
-  -webkit-transition: all ease 0.5s;
-  transition: all ease 0.5s;
-}
-
 .nav-links a:hover {
   background: rgba(255, 255, 255, 0.25);
   -webkit-transition: all ease 0.5s;
@@ -171,6 +165,106 @@ nav {
 
 #logo:hover {
   background-color: rgba(255, 255, 255, 0.25);
+}
+
+/* Socials Panel */
+.socialsPanel {
+  position: fixed;
+  top: 50vh;
+  padding-right: 100px;
+  margin-left: -40px;
+  width: 10vw;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: ease-in-out 0.25s;
+  transition: ease-in-out 0.25s;
+}
+
+.socialsPanel .fa-chevron-right {
+  color: rgba(255, 255, 255, 0.25);
+  -webkit-transition: ease-in-out 0.1s;
+  transition: ease-in-out 0.1s;
+}
+
+.socialsPanel:hover, .socialsPanelFocus {
+  margin-left: 25px;
+  -webkit-transition: ease-in-out 0.25s;
+  transition: ease-in-out 0.25s;
+}
+
+.socialsPanel:hover .fa-chevron-right, .socialsPanelFocus .fa-chevron-right {
+  color: rgba(255, 255, 255, 0.75);
+  -webkit-transition: ease-in-out 0.1s;
+  transition: ease-in-out 0.1s;
+}
+
+.socialsPanelIcons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.socialsIcons {
+  list-style: none;
+}
+
+.socialsIcons li {
+  margin-left: 5px;
+  margin-bottom: 5px;
+  width: 38px;
+  height: 38px;
+  border-radius: 15%;
+  background-color: #2A2A2A;
+}
+
+.socialsIcons i {
+  -webkit-transform: translateY(10%);
+          transform: translateY(10%);
+}
+
+.socialsIcons a {
+  width: 100%;
+  height: 100%;
+  font-size: 28px;
+  padding: 5px 7px;
+  text-decoration: none;
+  color: white;
+}
+
+.socialsIcons .fa-youtube {
+  -webkit-transform: translateY(5%);
+          transform: translateY(5%);
+  font-size: 23px;
+}
+
+.socialsIcons .fa-github {
+  -webkit-transform: translateY(5%);
+          transform: translateY(5%);
+  font-size: 25px;
+}
+
+.socialsIcons li:hover {
+  background-color: #353535;
+}
+
+.fa-chevron-right {
+  color: white;
+  font-size: 28px;
+  top: 50%;
+  left: 50px;
+  position: absolute;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .landing {
@@ -257,6 +351,7 @@ nav {
 
 .simpleAbout {
   margin: 10vh 8%;
+  visibility: hidden;
 }
 
 .simpleAbout p {
@@ -281,24 +376,48 @@ nav {
 
 .skillListGroups {
   margin: 2.5% 1px;
+  visibility: hidden;
+  opacity: 0;
 }
 
 .softwareSkills, .programList, .mediaList, .miscList {
   list-style: circle;
-  margin: 0px 0px 0px 15px;
+  margin: 0px 0px 0px 20px;
+}
+
+.scrolledPast {
+  visibility: visible;
+  z-index: -1;
+  -webkit-animation: fadeDown 1s ease-out;
+          animation: fadeDown 1s ease-out;
 }
 
 /* Projects Section */
-.projects {
+.projectsContent {
   width: 100%;
   height: 100vh;
+  padding-bottom: 10vh;
   background-color: #121212;
+}
+
+.projectHeader {
+  margin: 0px 8%;
+  padding-top: 10vh;
+  color: white;
+}
+
+.projectHeader p {
+  margin-top: 15px;
+}
+
+.projectHeader h1 {
+  font-size: 36px;
 }
 
 /* Quick Contacts Section */
 .quickContacts {
   width: 100%;
-  height: 85vh;
+  height: 50vh;
   z-index: 1;
   background-color: #1E1E1E;
 }
@@ -337,7 +456,7 @@ footer p {
   color: rgba(255, 255, 255, 0.25);
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 580px) {
   .menu-line {
     display: block;
     width: 20px;
@@ -397,6 +516,9 @@ footer p {
     z-index: 10;
     pointer-events: all;
     opacity: 100;
+  }
+  .socialsPanel {
+    display: none;
   }
   .landing h1 {
     font-size: 24px;
