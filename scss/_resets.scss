@@ -8,7 +8,7 @@
 
     /* Firefox Scroll bar*/
     scrollbar-width: thin;
-    scrollbar-color: $scrollbar $transparent;
+    scrollbar-color: $gray3 $transparent;
   
   /* Works on Chrome, Edge, and Safari */
   *::-webkit-scrollbar {
@@ -21,7 +21,7 @@
   }
   
   *::-webkit-scrollbar-thumb {
-    background-color: $scrollbar;
+    background-color: $gray3;
     border-radius: 20px;
     border: 3px solid $transparent;
   }

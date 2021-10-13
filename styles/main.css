@@ -7,7 +7,7 @@
   font-family: 'Montserrat', sans-serif;
   /* Firefox Scroll bar*/
   scrollbar-width: thin;
-  scrollbar-color: #1E1E1E rgba(0, 0, 0, 0);
+  scrollbar-color: #2A2A2A rgba(0, 0, 0, 0);
   /* Works on Chrome, Edge, and Safari */
 }
 
@@ -21,7 +21,7 @@
 }
 
 * *::-webkit-scrollbar-thumb {
-  background-color: #1E1E1E;
+  background-color: #2A2A2A;
   border-radius: 20px;
   border: 3px solid rgba(0, 0, 0, 0);
 }
@@ -92,7 +92,7 @@ body {
   overflow: overlay;
 }
 
-#navbar {
+.navbar {
   position: absolute;
   width: 100%;
 }
@@ -107,15 +107,19 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  list-style: none;
-  height: 100%;
-  width: 100%;
-  margin-right: 15px;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  list-style: none;
+  height: 100%;
+  width: 100%;
+  margin-right: 15px;
   margin-left: auto;
 }
 
@@ -244,9 +248,93 @@ nav {
   margin-bottom: 5px;
 }
 
-.highlights {
+/* Highlights Section */
+.highlightsContent {
   width: 100%;
-  height: 200vh;
+  height: 100%;
+  padding-bottom: 10vh;
+}
+
+.simpleAbout {
+  margin: 10vh 8%;
+}
+
+.simpleAbout p {
+  margin-top: 15px;
+}
+
+.simpleAbout h1 {
+  font-size: 36px;
+}
+
+.skillSet {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  list-style: none;
+  margin: 0px 8%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.skillListGroups {
+  margin: 2.5% 1px;
+}
+
+.softwareSkills, .programList, .mediaList, .miscList {
+  list-style: circle;
+  margin: 0px 0px 0px 15px;
+}
+
+/* Projects Section */
+.projects {
+  width: 100%;
+  height: 100vh;
+  background-color: #121212;
+}
+
+/* Quick Contacts Section */
+.quickContacts {
+  width: 100%;
+  height: 85vh;
+  z-index: 1;
+  background-color: #1E1E1E;
+}
+
+/* Footer */
+footer {
+  background-color: #121212;
+  padding: 40px 10%;
+}
+
+footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style: none;
+  text-decoration: none;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+footer p {
+  color: rgba(255, 255, 255, 0.25);
 }
 
 @media screen and (max-width: 480px) {
