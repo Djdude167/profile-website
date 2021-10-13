@@ -1,0 +1,205 @@
+@import './_resets.scss';
+@import './_variables.scss';
+@import './_animations.scss';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400&display=swap');
+
+@mixin flexCenter($flexDirection) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $flexDirection;
+}
+
+@mixin centerIMG {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body {
+    overflow: overlay;
+}
+
+#navbar {
+    position: absolute;
+    width: 100%;
+}
+
+nav {
+    height: 10vh;
+    width: 100%;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    height: 100%;
+    width: 100%;
+    margin-right: 15px;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: auto;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 10px;
+    padding: 10px 15px;
+    transition: all 0.5s ease;
+}
+
+.nav-links i {
+    color: white;
+    padding: 10px 15px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.nav-links i:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transition: all ease 0.5s;
+}
+
+.nav-links a:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transition: all ease 0.5s;
+}
+
+.menu-line {
+    display: none;
+    transition: 0.5s ease all;
+}
+
+#logo {
+    display: none;
+    border-radius: 10px;
+    padding: 10px 15px;
+    transition: 0.5s ease all;
+}
+
+#logo:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.landing {
+    width: 100%;
+    height: 100vh;
+    background-color: $gray;
+    color: white;
+    @include flexCenter(column);
+    h1, h2 {
+        margin-top: 15px;
+        text-align: center;
+        animation: fadeSpread 0.75s ease;
+    }
+    h1 {
+        letter-spacing: 5px;
+        font-size: 48px;
+        font-weight: 300;
+    }
+    h2 {
+        font-weight: lighter;
+        font-size: 24px;
+    }
+}
+
+.profileIMG {
+    width: $profIMGSize;
+    height: $profIMGSize;
+    object-fit: cover;
+    border: 5px solid white;
+    border-radius: 50%;
+    animation: fadeDown 0.75s ease-out;
+}
+
+.readMore {
+    @include flexCenter(column);
+    position: absolute;
+    bottom: 2.5%;
+    animation: 1s ease-in-out bob infinite;
+    animation-direction: alternate;
+    p {
+        margin-bottom: 5px;
+    }
+}
+
+.highlights {
+    width: 100%;
+    height: 200vh;
+}
+
+
+@media screen and (max-width: 480px) {
+    // Navbar
+    .menu-line {
+        display: block;
+        width: 20px;
+        height: 3px;
+        margin-bottom: 4px;
+        border-radius: 15px;
+        background: white;
+    }
+    nav {
+        position: relative;
+        background: $gray;
+    }
+    .menu {
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+        z-index: 2;
+    }
+    .menu:hover {
+        .menu-line {
+            background: rgba(255, 255, 255, 0.75);
+            transition: 0.5s ease all;
+        }
+    }
+    .nav-links {
+        position: fixed;
+        height: 50vh;
+        width: 100%;
+        flex-direction: column;
+        background: $gray;
+        font-size: 24px;
+        opacity: 0;
+        pointer-events: none;
+        margin-top: 5vh;
+    }
+    .nav-links.open {
+        opacity: 100;
+        pointer-events: all;
+    }
+    .nav-links li:nth-child(1) {
+        display: none;
+    }
+    #logo {
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 15px;
+        color: white;
+        text-decoration: none;
+        transform: translateY(-50%);
+        z-index: 10;
+        pointer-events: all;
+        opacity: 100;
+    }
+
+    // Landing
+    .landing  {
+        h1 {
+            font-size: 24px;
+        }
+        h2 {
+            font-size: 14px;
+        }
+    }
+}

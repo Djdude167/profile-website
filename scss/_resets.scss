@@ -1,0 +1,28 @@
+@import './_variables.scss';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+
+    /* Firefox Scroll bar*/
+    scrollbar-width: thin;
+    scrollbar-color: $scrollbar $transparent;
+  
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 12px;
+    background-color: transparent;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: $transparent;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: $scrollbar;
+    border-radius: 20px;
+    border: 3px solid $transparent;
+  }
+}
