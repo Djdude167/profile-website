@@ -4,17 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/main.css">
 
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="/src/styles/main.css">
+    
     <!-- Tab Styling -->
     <title>Dylan Orr</title>
-    <link rel="icon" href="/images/TabIconImg.png">
+    <link rel="icon" href="/images/TabIconImg.png"/>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400&display=swap">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&family=Roboto+Mono:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navbar-->
@@ -25,122 +28,68 @@
                 <div class="menu-line"></div>
                 <div class="menu-line"></div>
             </div>
-            <a href="#" id="logo">Dylan Orr</a>
+            <a href="#" id="name">Dylan Orr</a>
             <ul class="nav-links" id="navList">
-                <li><a href="#">Home</a></li>
-                <li><a href="pages/portfolio.html">Portfolio</a></li>
-                <li><a href="pages/posts.html">Posts</a></li>
-                <li><a href="pages/contact.html">Contact</a></li>
-                <li><a href="pages/settings.html"><i class="fas fa-cog" id="settingsCog"></a></i></li>
+                <li class="home-button" ><a href="#">Home</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Posts</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#"><i class="fas fa-cog" id="settingsCog"></a></i></li>
             </ul>
         </nav>
     </section>
-
-    <span class="socialsPanel">
-        <div class="socialsPanelIcons">
-            <ul class="socialsIcons">
-                <li><a href="https://youtube.com/Djdude167" target="_blank"><i class="fab fa-youtube"></i></a></li>
-                <li><a href="https://www.linkedin.com/in/dylan-orr-a89435221/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-                <li><a href="https://github.com/DylanJOrr" target="_blank"><i class="fab fa-github"></i></a></li>
-                <li><a href="https://twitter.com/djdude167" target="_blank"><i class="fab fa-twitter-square"></i></a></li>
-                <li><a href="https://discord.gg/mvMsdkY" target="_blank"><i class="fab fa-discord"></i></a></li>
-                <li><a href="pages/contact.html"><i class="fas fa-envelope-square"></i></a></li>
-            </ul>
-            <i class="fas fa-chevron-right"></i>
+    <section class="landing">
+        <!-- Background Icons -->
+        <div class="bg-icons">
+            <div class="icons-row"></div>
         </div>
-    </span>
-    
-    <!--Landing Page-->
-    <section class="landing" id="landing">
-        <img class="profileIMG" src="./images/Profile Photo.JPG" alt="Profile Image">
-        <h1>Dylan Orr</h1>
-        <h2>Software Engineering student currently <br>enrolled at the University of Ottawa</h2>
-        <div class="readMore">
-            <p>Read More</p>
-            <i class="fas fa-angle-double-down"></i>
-        </div>
-        
-    </section>
-
-    <!--Highlights Section-->
-    <section class="highlights">
-        <div class="highlightsContent">
-            <div class="simpleAbout">
-                <h1>My Skills</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt eveniet quo porro aperiam hic, mollitia exercitationem beatae ex, minus praesentium ipsa voluptatum distinctio recusandae possimus repellat aspernatur necessitatibus quia a.</p>
+        <div class="radialGradient"></div> 
+        <!-- Content -->
+        <div class="landingContent">
+            <div class="landingText wrapper">
+                <p class="line__1 name">Dylan Orr.</p>
+                <p class="line__2 job">Software Engineer.</p>
             </div>
-            <div class="skillList">
-                <ul class="skillSet">
-                    <li class="skillListGroups" id="softwareList">
-                        <h1>Software</h1>
-                        <ul class="softwareSkills">
-                            <li><p>C, C++, C#, Python</p></li>
-                            <li><p>HTML, CSS, SASS, JS</p></li>
-                            <li><p>Object Oriented Programming</p></li>
-                            <li><p>Programming Best Practices</p></li>
-                            <li><p>Use Tabs over Spaces</p></li>
-                        </ul>
-                    </li>
-                    <li class="skillListGroups" id="programList">
-                        <h1>Programs</h1>
-                        <ul class="programList">
-                            <li><p>Windows/Mac/Linux</p></li>
-                            <li><p>Microsoft Office/Google G Suite</p></li>
-                            <li><p>Adobe CC Suite</p></li>
-                            <li><p>Visual Studio + VS Code</p></li>
-                            <li><p>Blender</p></li>
-                        </ul>
-                    </li>
-                    <li class="skillListGroups" id="mediaList">
-                        <h1>Media Production</h1>
-                        <ul class="mediaList">
-                            <li><p>10+ Years Video Production (2011+)</p></li>
-                            <li><p>6+ Years 3D Experience</p></li>
-                            <li><p>Freelance Video Work</p></li>
-                            <li><p>DSLR and Camera work</p></li>
-                            <li><p>DSLR and Camera work</p></li>
-                        </ul>
-                    </li>
-                    <li class="skillListGroups" id="miscList">
-                        <h1>Miscellaneous</h1>
-                        <ul class="miscList">
-                            <li><p>C, C++, C#, Python</p></li>
-                            <li><p>HTML, CSS, SASS, JS</p></li>
-                            <li><p>Object Oriented Programming</p></li>
-                            <li><p>Programming Best Practices</p></li>
-                            <li><p>Use Tabs over Spaces</p></li>
-                        </ul>
-                    </li>
-                </ul>
+            <div class="landingButtons">
+                <button class="primary"><img src="/src/svg/mail.svg" alt="mail" class="contactIcon">CONTACT</button>
+                <div class="secondary">
+                    <button class="secondaryButton"><img src="/src/svg/projects.svg" alt="proj" class="projectsIcon">PROJECTS</button>
+                    <svg class="test" width="250" height="50">
+                        <defs class="gradient-secondary">
+                            <linearGradient id='g1' gradientUnits='userSpaceOnUse' x1='84.15%' y1='109.15%' x2='15.85%' y2='-9.15%'>
+                                <stop class="stop1" stop-color='#fff33b'/>
+                                <stop class="stop2" offset='.28' stop-color='#fdc70c'/>
+                                <stop class="stop3" offset='.67' stop-color='#ed683c'/>
+                                <stop class="stop4" offset='.89' stop-color='#ed683c'/>
+                                <stop class="stop5" offset='1' stop-color='#e93e3a'/>
+                            </linearGradient>
+                        </defs>
+                        <rect x="2.5" y="2.5" rx="15" ry="15" width="130" height="45" stroke="url(#g1)" fill="transparent" stroke-width="3"/>
+                    </svg>
+                </div>
             </div>
         </div>
+    <div class="readMore">
+        <img src="/src/svg/mouse.svg" alt="scroll down">
+    </div>
     </section>
     <section class="projects">
-        <div class="projectsContent">
-            <div class="projectHeader">
-                <h1>My Work</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt eveniet quo porro aperiam hic, mollitia exercitationem beatae ex, minus praesentium ipsa voluptatum distinctio recusandae possimus repellat aspernatur necessitatibus quia a.</p>
-            </div>
-        </div>
+
     </section>
-    <section class="quickContacts">
+    <section class="posts">
+
+    </section>
+    <section class="about">
+
+    </section>
+    <section class="contact">
 
     </section>
     <footer>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><p>|</p></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><p>|</p></li>
-            <li><a href="#">Posts</a></li>
-            <li><p>|</p></li>
-            <li><a href="#">Contact</a></li>
-            <li><p>|</p></li>
-            <li><a href="#">Settings</a></li>
-        </ul>
-    </footer>
-    <script src="scripts/scripts.js"></script>
-    <script src="scripts/scroll.js"></script>
-</body>
 
+    </footer>
+    <script src="/src/scripts/icons.js"></script>
+    <script src="/src/scripts/main.js"></script>
+</body>
 </html>
