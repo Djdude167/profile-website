@@ -3,6 +3,7 @@ body {
   position: relative;
   background-color: #0c2031;
   overflow-x: hidden;
+  overflow-y: overlay;
 }
 
 .radialGradient {
@@ -22,7 +23,7 @@ body {
 
 .landing .landingContent {
   position: absolute;
-  top: 20%;
+  top: 35vh;
   left: 12vw;
 }
 
@@ -33,7 +34,7 @@ body {
 .landing .landingContent .name,
 .landing .landingContent .job {
   font-size: 3rem;
-  font-weight: 300;
+  font-weight: 200;
   margin-bottom: 15px;
 }
 
@@ -92,8 +93,10 @@ button .projectsIcon {
 
 .primary:hover {
   background: linear-gradient(120deg, #fff33b 0%, #fdc70c 35%, #ed683c 85%, #ed683c 89%, #e93e3a 100%);
-  -webkit-box-shadow: 5px 5px 15px -6px rgba(0, 0, 0, 0.5);
-          box-shadow: 5px 5px 15px -6px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 5px 5px 15px -6px rgba(0, 0, 0, 0.75);
+          box-shadow: 5px 5px 15px -6px rgba(0, 0, 0, 0.75);
+  -webkit-filter: brightness(120%);
+          filter: brightness(120%);
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
@@ -113,16 +116,11 @@ button .projectsIcon {
 }
 
 .secondary:hover {
-  -webkit-box-shadow: 5px 5px 15px -6px rgba(0, 0, 0, 0.5);
-          box-shadow: 5px 5px 15px -6px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 5px 5px 15px -6px rgba(0, 0, 0, 0.75);
+          box-shadow: 5px 5px 15px -6px rgba(0, 0, 0, 0.75);
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
   background-color: rgba(255, 255, 255, 0.05);
-}
-
-.primary:hover .secondary:hover {
-  -webkit-transform: scale(120%);
-          transform: scale(120%);
 }
 
 .secondaryButton {
@@ -138,6 +136,7 @@ button .projectsIcon {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  opacity: 75%;
   -webkit-animation: 1s ease-in-out bob infinite;
           animation: 1s ease-in-out bob infinite;
   -webkit-animation-direction: alternate;
@@ -160,26 +159,24 @@ button .projectsIcon {
 }
 
 .line__1 {
-  border-right: 2px solid rgba(17, 17, 17, 0);
+  border-right: 3px solid rgba(17, 17, 17, 0);
   /* define animation types for text + cursor */
-  -webkit-animation: animated-text__1 1s steps(10, end) 0.5s 1 normal both, animated-cursor 1s steps(10, end) 2 forwards;
-          animation: animated-text__1 1s steps(10, end) 0.5s 1 normal both, animated-cursor 1s steps(10, end) 2 forwards;
+  -webkit-animation: animated-text__1 1s steps(10, end) 1s 1 normal both, animated-cursor 1s steps(10, end) 2 forwards;
+          animation: animated-text__1 1s steps(10, end) 1s 1 normal both, animated-cursor 1s steps(10, end) 2 forwards;
 }
 
 .line__2 {
-  border-right: 2px solid rgba(17, 17, 17, 0);
+  border-right: 3px solid rgba(17, 17, 17, 0);
   /* define animation types for text + cursor */
-  -webkit-animation: animated-text__2 2s steps(18, end) 1s 1 normal both, animated-cursor 1s steps(18, end) infinite;
-          animation: animated-text__2 2s steps(18, end) 1s 1 normal both, animated-cursor 1s steps(18, end) infinite;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
+  -webkit-animation: animated-text__2 2s steps(18, end) 3s 1 normal both, animated-cursor 1s steps(18, end) 2s infinite;
+          animation: animated-text__2 2s steps(18, end) 3s 1 normal both, animated-cursor 1s steps(18, end) 2s infinite;
 }
 
 @-webkit-keyframes animated-cursor {
   0% {
     -webkit-animation-timing-function: step-end;
             animation-timing-function: step-end;
-    border-right-color: rgba(0, 0, 0, 0);
+    border-right-color: transparent;
   }
   50% {
     -webkit-animation-timing-function: step-end;
@@ -189,7 +186,7 @@ button .projectsIcon {
   100% {
     -webkit-animation-timing-function: step-end;
             animation-timing-function: step-end;
-    border-right-color: rgba(0, 0, 0, 0);
+    border-right-color: transparent;
   }
 }
 
@@ -197,7 +194,7 @@ button .projectsIcon {
   0% {
     -webkit-animation-timing-function: step-end;
             animation-timing-function: step-end;
-    border-right-color: rgba(0, 0, 0, 0);
+    border-right-color: transparent;
   }
   50% {
     -webkit-animation-timing-function: step-end;
@@ -207,7 +204,7 @@ button .projectsIcon {
   100% {
     -webkit-animation-timing-function: step-end;
             animation-timing-function: step-end;
-    border-right-color: rgba(0, 0, 0, 0);
+    border-right-color: transparent;
   }
 }
 
@@ -216,7 +213,7 @@ button .projectsIcon {
     width: 0;
   }
   to {
-    width: 16.5rem;
+    width: 17rem;
   }
 }
 
@@ -225,7 +222,7 @@ button .projectsIcon {
     width: 0;
   }
   to {
-    width: 16.5rem;
+    width: 17rem;
   }
 }
 
@@ -466,5 +463,24 @@ nav {
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  /* Works on Chrome, Edge, and Safari */
+  /* Firefox Scroll bar*/
+  scrollbar-width: thin;
+  scrollbar-color: #2a2a2a rgba(0, 0, 0, 0);
+}
+
+* *::-webkit-scrollbar {
+  width: 12px;
+  background-color: transparent;
+}
+
+* *::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+* *::-webkit-scrollbar-thumb {
+  background-color: #2a2a2a;
+  border-radius: 20px;
+  border: 3px solid rgba(0, 0, 0, 0);
 }
 /*# sourceMappingURL=main.css.map */

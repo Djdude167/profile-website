@@ -6,6 +6,7 @@ body {
 	position: relative;
 	background-color: $backgroundColour;
 	overflow-x: hidden;
+	overflow-y: overlay;
 }
 .radialGradient {
 	position: absolute;
@@ -26,7 +27,7 @@ body {
 	position: relative;
 	.landingContent {
 		position: absolute;
-		top: 20%;
+		top: 35vh;
 		left: 12vw;
 
 		.landingText {
@@ -35,7 +36,7 @@ body {
 		.name,
 		.job {
 			font-size: 3rem;
-			font-weight: 300;
+			font-weight: 200;
 			margin-bottom: 15px;
 		}
 		.job {
@@ -83,7 +84,8 @@ button {
 			rgba(237, 104, 60, 1) 89%,
 			rgba(233, 62, 58, 1) 100%
 		);
-		box-shadow: 5px 5px 15px -6px rgba(0, 0, 0, 0.5);
+		box-shadow: 5px 5px 15px -6px rgba(0, 0, 0, 0.75);
+		filter: brightness(120%);
 		transition: all 0.25s ease;
 	}
 }
@@ -97,14 +99,10 @@ button {
 	align-items: center;
 	border-radius: 15px;
 	&:hover {
-		box-shadow: 5px 5px 15px -6px rgba(0, 0, 0, 0.5);
+		box-shadow: 5px 5px 15px -6px rgba(0, 0, 0, 0.75);
 		transition: all 0.25s ease;
 		background-color: rgba(255, 255, 255, 0.05);
 	}
-}
-
-.primary:hover .secondary:hover {
-	transform: scale(120%);
 }
 
 .secondaryButton {
@@ -119,6 +117,7 @@ button {
 	top: calc(93vh);
 	left: 50%;
 	transform: translateX(-50%);
+	opacity: 75%;
 	animation: 1s ease-in-out bob infinite;
 	animation-direction: alternate;
 	img {
@@ -136,26 +135,25 @@ button {
 }
 
 .line__1 {
-	border-right: 2px solid rgba(17, 17, 17, 0);
+	border-right: 3px solid rgba(17, 17, 17, 0);
 
 	/* define animation types for text + cursor */
-	animation: animated-text__1 1s steps(10, end) 0.5s 1 normal both,
+	animation: animated-text__1 1s steps(10, end) 1s 1 normal both,
 		animated-cursor 1s steps(10, end) 2 forwards;
 }
 
 .line__2 {
-	border-right: 2px solid rgba(17, 17, 17, 0);
+	border-right: 3px solid rgba(17, 17, 17, 0);
 
 	/* define animation types for text + cursor */
-	animation: animated-text__2 2s steps(18, end) 1s 1 normal both,
-		animated-cursor 1s steps(18, end) infinite;
-	animation-delay: 2s;
+	animation: animated-text__2 2s steps(18, end) 3s 1 normal both,
+		animated-cursor 1s steps(18, end) 2s infinite;
 }
 
 @keyframes animated-cursor {
 	0% {
 		animation-timing-function: step-end;
-		border-right-color: rgba(0, 0, 0, 0);
+		border-right-color: transparent;
 	}
 	50% {
 		animation-timing-function: step-end;
@@ -163,7 +161,7 @@ button {
 	}
 	100% {
 		animation-timing-function: step-end;
-		border-right-color: rgba(0, 0, 0, 0);
+		border-right-color: transparent;
 	}
 }
 
@@ -172,7 +170,7 @@ button {
 		width: 0;
 	}
 	to {
-		width: 16.5rem;
+		width: 17rem;
 	}
 }
 
