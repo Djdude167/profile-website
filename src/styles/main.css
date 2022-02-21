@@ -1,0 +1,486 @@
+body {
+  width: 100vw;
+  position: relative;
+  background-color: #0c2031;
+  overflow-x: hidden;
+  overflow-y: overlay;
+}
+
+.radialGradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle 150vh at 0 0, rgba(25, 60, 91, 0.75) 0%, rgba(233, 62, 58, 0) 100%);
+}
+
+.landing {
+  color: #ffffff;
+  font-family: "Roboto Mono", monospace;
+  position: relative;
+}
+
+.landing .landingContent {
+  position: absolute;
+  top: 35vh;
+  left: 12vw;
+}
+
+.landing .landingContent .landingText {
+  position: relative;
+}
+
+.landing .landingContent .name,
+.landing .landingContent .job {
+  font-size: 3rem;
+  font-weight: 200;
+  margin-bottom: 15px;
+}
+
+.landing .landingContent .job {
+  margin-bottom: 25px;
+}
+
+.landingButtons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+button {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  border-radius: 15px;
+  padding: 8px 14px;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+button img {
+  width: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+button .projectsIcon {
+  width: 1rem;
+}
+
+.primary {
+  border: none;
+  background: slateblue;
+  cursor: pointer;
+  margin-right: 15px;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+.primary:hover {
+  background: linear-gradient(120deg, #fff33b 0%, #fdc70c 35%, #ed683c 85%, #ed683c 89%, #e93e3a 100%);
+  -webkit-box-shadow: 5px 5px 15px -6px rgba(0, 0, 0, 0.75);
+          box-shadow: 5px 5px 15px -6px rgba(0, 0, 0, 0.75);
+  -webkit-filter: brightness(120%);
+          filter: brightness(120%);
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+.secondary {
+  position: relative;
+  cursor: pointer;
+  width: 136px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 15px;
+}
+
+.secondary:hover {
+  -webkit-box-shadow: 5px 5px 15px -6px rgba(0, 0, 0, 0.75);
+          box-shadow: 5px 5px 15px -6px rgba(0, 0, 0, 0.75);
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.secondaryButton {
+  position: absolute;
+  background: transparent;
+  border: none;
+  pointer-events: none;
+}
+
+.readMore {
+  position: absolute;
+  top: calc(93vh);
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  opacity: 75%;
+  -webkit-animation: 1s ease-in-out bob infinite;
+          animation: 1s ease-in-out bob infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+.readMore img {
+  width: 20px;
+}
+
+.line__1,
+.line__2 {
+  white-space: nowrap;
+  /* keep text in one line */
+  overflow: hidden;
+  /* hide text behind the cursor */
+  font-family: "Major Mono Display", monospace;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.line__1 {
+  border-right: 3px solid rgba(17, 17, 17, 0);
+  /* define animation types for text + cursor */
+  -webkit-animation: animated-text__1 1s steps(10, end) 1s 1 normal both, animated-cursor 1s steps(10, end) 2 forwards;
+          animation: animated-text__1 1s steps(10, end) 1s 1 normal both, animated-cursor 1s steps(10, end) 2 forwards;
+}
+
+.line__2 {
+  border-right: 3px solid rgba(17, 17, 17, 0);
+  /* define animation types for text + cursor */
+  -webkit-animation: animated-text__2 2s steps(18, end) 3s 1 normal both, animated-cursor 1s steps(18, end) 2s infinite;
+          animation: animated-text__2 2s steps(18, end) 3s 1 normal both, animated-cursor 1s steps(18, end) 2s infinite;
+}
+
+@-webkit-keyframes animated-cursor {
+  0% {
+    -webkit-animation-timing-function: step-end;
+            animation-timing-function: step-end;
+    border-right-color: transparent;
+  }
+  50% {
+    -webkit-animation-timing-function: step-end;
+            animation-timing-function: step-end;
+    border-right-color: rgba(255, 255, 255, 0.8);
+  }
+  100% {
+    -webkit-animation-timing-function: step-end;
+            animation-timing-function: step-end;
+    border-right-color: transparent;
+  }
+}
+
+@keyframes animated-cursor {
+  0% {
+    -webkit-animation-timing-function: step-end;
+            animation-timing-function: step-end;
+    border-right-color: transparent;
+  }
+  50% {
+    -webkit-animation-timing-function: step-end;
+            animation-timing-function: step-end;
+    border-right-color: rgba(255, 255, 255, 0.8);
+  }
+  100% {
+    -webkit-animation-timing-function: step-end;
+            animation-timing-function: step-end;
+    border-right-color: transparent;
+  }
+}
+
+@-webkit-keyframes animated-text__1 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 17rem;
+  }
+}
+
+@keyframes animated-text__1 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 17rem;
+  }
+}
+
+@-webkit-keyframes animated-text__2 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 30rem;
+  }
+}
+
+@keyframes animated-text__2 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 30rem;
+  }
+}
+
+@-webkit-keyframes bob {
+  0% {
+    top: 93vh;
+  }
+  100% {
+    top: 95vh;
+  }
+}
+
+@keyframes bob {
+  0% {
+    top: 93vh;
+  }
+  100% {
+    top: 95vh;
+  }
+}
+
+.bg-icons {
+  position: relative;
+  width: 100%;
+  height: 100vmax;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  opacity: 10%;
+  z-index: -1;
+}
+
+.icon {
+  width: 40vw;
+  margin: 0.5vw 2vw;
+}
+
+.icons-row {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  white-space: nowrap;
+  -webkit-transform: rotate(-40deg);
+          transform: rotate(-40deg);
+  left: -10%;
+  top: -50%;
+}
+
+.icons-row .div:nth-child(odd) {
+  -webkit-animation: moveIn1 1.5s ease, move1 150s linear infinite 1.5s;
+          animation: moveIn1 1.5s ease, move1 150s linear infinite 1.5s;
+}
+
+.icons-row .div:nth-child(even) {
+  animation: moveIn2 1.5s ease, move1 reverse 150s linear infinite 1.5s;
+}
+
+@-webkit-keyframes move1 {
+  0% {
+    -webkit-transform: translate(-100%);
+            transform: translate(-100%);
+  }
+  100% {
+    -webkit-transform: translate(32%);
+            transform: translate(32%);
+  }
+}
+
+@keyframes move1 {
+  0% {
+    -webkit-transform: translate(-100%);
+            transform: translate(-100%);
+  }
+  100% {
+    -webkit-transform: translate(32%);
+            transform: translate(32%);
+  }
+}
+
+@-webkit-keyframes moveIn1 {
+  0% {
+    -webkit-transform: translate(-200%);
+            transform: translate(-200%);
+  }
+  100% {
+    -webkit-transform: translate(-100%);
+            transform: translate(-100%);
+  }
+}
+
+@keyframes moveIn1 {
+  0% {
+    -webkit-transform: translate(-200%);
+            transform: translate(-200%);
+  }
+  100% {
+    -webkit-transform: translate(-100%);
+            transform: translate(-100%);
+  }
+}
+
+@-webkit-keyframes moveIn2 {
+  0% {
+    -webkit-transform: translate(200%);
+            transform: translate(200%);
+  }
+  100% {
+    -webkit-transform: translate(32%);
+            transform: translate(32%);
+  }
+}
+
+@keyframes moveIn2 {
+  0% {
+    -webkit-transform: translate(200%);
+            transform: translate(200%);
+  }
+  100% {
+    -webkit-transform: translate(32%);
+            transform: translate(32%);
+  }
+}
+
+.navbar {
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+}
+
+nav {
+  height: 10vh;
+  width: 100%;
+  color: white;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 200;
+}
+
+.nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  list-style: none;
+  height: 100%;
+  width: 100%;
+  margin-right: 15px;
+  margin-left: auto;
+}
+
+.nav-links li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 15px;
+  padding: 10px 15px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.nav-links i {
+  color: white;
+  padding: 10px 15px;
+  font-size: 18px;
+  border-radius: 15px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.nav-links .home-button {
+  -webkit-box-flex: 0.25;
+      -ms-flex-positive: 0.25;
+          flex-grow: 0.25;
+}
+
+.nav-links a:hover {
+  background: rgba(255, 255, 255, 0.25);
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+.menu-line {
+  display: none;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+
+#name {
+  display: none;
+  border-radius: 10px;
+  padding: 10px 15px;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+
+#name:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* Works on Chrome, Edge, and Safari */
+  /* Firefox Scroll bar*/
+  scrollbar-width: thin;
+  scrollbar-color: #2a2a2a rgba(0, 0, 0, 0);
+}
+
+* *::-webkit-scrollbar {
+  width: 12px;
+  background-color: transparent;
+}
+
+* *::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+* *::-webkit-scrollbar-thumb {
+  background-color: #2a2a2a;
+  border-radius: 20px;
+  border: 3px solid rgba(0, 0, 0, 0);
+}
+/*# sourceMappingURL=main.css.map */
