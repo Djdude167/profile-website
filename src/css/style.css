@@ -24,7 +24,7 @@ h1 {
 	font-family: "Absender";
 	font-size: 3.5rem;
 	color: #383b43;
-	text-shadow: 5px 5px 0px rgb(250, 176, 24);
+	text-shadow: 2px 2px 0px rgb(250, 176, 24);
 }
 
 h2 {
@@ -33,7 +33,7 @@ h2 {
 	margin: 15px;
 	line-height: 102%;
 	color: #383b43;
-	text-shadow: 5px 5px 0px rgb(250, 176, 24);
+	text-shadow: 2px 2px 0px rgb(250, 176, 24);
 }
 
 .social-links {
@@ -43,7 +43,7 @@ h2 {
 	justify-content: center;
 	list-style: none;
 	font-size: 2.5rem;
-	color: #fab018;
+	color: #383b43;
 	margin-top: 15px;
 }
 
@@ -51,6 +51,13 @@ h2 {
 	text-decoration: none;
 	color: #383b43;
 	text-shadow: 2px 2px 0px rgb(250, 176, 24);
+	transition: all ease 0.5s;
+}
+
+.social-links a:hover {
+	transform: scale(1.1);
+	text-shadow: 4px 4px 0px rgb(250, 176, 24);
+	transition: all ease 0.5s;
 }
 
 .social-links li {
@@ -59,7 +66,7 @@ h2 {
 
 .social-links p {
 	padding-top: 0;
-	text-shadow: 2px 2px 0px #383b43;
+	text-shadow: 2px 2px 0px #fab018;
 }
 
 .fa-helmet-safety {
