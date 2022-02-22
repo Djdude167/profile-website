@@ -13,25 +13,40 @@ body {
 	text-align: center;
 	background: rgb(200, 200, 200);
 	background: linear-gradient(0deg, rgba(200, 200, 200, 1) 0%, rgba(255, 255, 255, 1) 100%);
+	background-attachment: fixed;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	overflow-x: hidden;
 }
 
 .links-group {
+	top: 100%;
 	width: 100%;
 	height: 35vh;
 }
 
-/* Test */
+.under-construction {
+	display: block;
+	margin: auto;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	z-index: -1;
+}
 
 h1 {
 	font-family: "Absender";
-	font-size: 3.5rem;
+	font-size: 4vw;
 	color: #383b43;
 	text-shadow: 2px 2px 0px rgb(250, 176, 24);
 }
 
 h2 {
 	font-family: "Absender";
-	font-size: 2rem;
+	font-size: 2.5vw;
 	margin: 15px;
 	line-height: 102%;
 	color: #383b43;
@@ -44,7 +59,7 @@ h2 {
 	flex-direction: row;
 	justify-content: center;
 	list-style: none;
-	font-size: 2.5rem;
+	font-size: 3vw;
 	color: #383b43;
 	margin-top: 15px;
 }
@@ -73,8 +88,8 @@ h2 {
 
 .fa-helmet-safety {
 	color: #fab018;
-	font-size: 2rem;
-	transform: translate(180px, 12px) rotate(-30deg);
+	font-size: 2vw;
+	transform: translate(12.5vw, 12px) rotate(-30deg);
 	text-shadow: 0px 2px 0px #383b43;
 }
 
