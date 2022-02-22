@@ -32,8 +32,6 @@ body {
 	display: block;
 	margin: auto;
 	width: 100vw;
-	display: flex;
-	justify-content: center;
 	z-index: -1;
 }
 
